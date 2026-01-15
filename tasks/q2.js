@@ -1,3 +1,6 @@
+// Task 1 - Q2 Yejin Oh 40229957
+
+
 function drawEllipse(x, y, w, h, r, g, b) {
     fill(r, g, b);
     ellipse(x, y, w, h);

@@ -1,3 +1,5 @@
+// Task 1 - Q1 Yejin Oh 40229957
+
 function setup() {
     createCanvas(600, 400);
     background(0);

@@ -1,3 +1,6 @@
+// Task 1 - Q3 Yejin Oh 40229957
+
+
 // RECTANGLE 1 VARIABLES (controlled by mouse click)
 let x1, y1, w1, h1;
 let r1, g1, b1;
