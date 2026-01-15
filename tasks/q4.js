@@ -45,7 +45,7 @@ function setup() {
 function draw() {
     background(0); // clear the canvas each frame
 
-    // ---- Check if mouse is over rectangle 1 ----
+    //  Check if mouse is over rectangle 1 
     if (mouseX >= x1 && mouseX <= x1 + rectWidth && mouseY >= yPos && mouseY <= yPos + rectHeight) {
         currR1 = 255;
         currG1 = 255;
@@ -57,7 +57,7 @@ function draw() {
         currB1 = colour1.b;
     }
 
-    // ---- Check if mouse is over rectangle 2 ----
+    //  Check if mouse is over rectangle 2 
     if (mouseX >= x2 && mouseX <= x2 + rectWidth && mouseY >= yPos && mouseY <= yPos + rectHeight) {
         currR2 = 255;
         currG2 = 255;
@@ -69,7 +69,7 @@ function draw() {
         currB2 = colour2.b;
     }
 
-    // ---- Check if mouse is over rectangle 3 ----
+    //  Check if mouse is over rectangle 3 
     if (mouseX >= x3 && mouseX <= x3 + rectWidth && mouseY >= yPos && mouseY <= yPos + rectHeight) {
         currR3 = 255;
         currG3 = 255;
@@ -81,7 +81,7 @@ function draw() {
         currB3 = colour3.b;
     }
 
-    // ---- Draw the three rectangles ----
+    //  Draw the three rectangles 
     fill(currR1, currG1, currB1);
     rect(x1, yPos, rectWidth, rectHeight);
 

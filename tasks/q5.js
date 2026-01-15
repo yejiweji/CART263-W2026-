@@ -1,6 +1,5 @@
 // Task 1 - Q5 Yejin Oh 40229957
 
-
 // Counter variable for number of ellipses to draw
 let counter = 0;
 
@@ -21,7 +20,7 @@ let orangeSquare = {
 };
 
 
-// BONUS II: RED SQUARE OBJECT
+// RED SQUARE OBJECT
 let redSquare = {
     x: 120,    
     y: 20,
@@ -45,13 +44,13 @@ function setup() {
 function draw() {
     background(0); // clear canvas
 
-    // --- Draw orange square ---
+    //  Draw orange square 
     displaySquare(orangeSquare);
 
-    // --- Draw red square (BONUS II) ---
+    // Draw red square (BONUS II) 
     displaySquare(redSquare);
 
-    // --- Ellipses logic ---
+    //  Ellipses logic 
     // Only draw if counter is between 1 and 10
     if (counter >= 1 && counter <= 10) {
         let i = 0;               // counter for while loop
@@ -69,7 +68,7 @@ function draw() {
 
 // FUNCTION TO DISPLAY A SQUARE
 function displaySquare(square) {
-    // --- Check if mouse is over the square ---
+    //  Check if mouse is over the square 
     if (checkCollisionWithSquare(square)) {
         fill(
             min(square.r + 50, 255), // lighter when hovered
@@ -92,7 +91,7 @@ function checkCollisionWithSquare(square) {
     return false;
 }
 
-// FUNCTION TO DRAW A CIRCLE (BONUS I)
+// FUNCTION TO DRAW A CIRCLE
 function drawCircle(x, y, radius, alphaVal) {
     fill(255, 255, 255, alphaVal);
     ellipse(x, y, radius * 2, radius * 2);
@@ -100,13 +99,13 @@ function drawCircle(x, y, radius, alphaVal) {
 
 // MOUSE CLICK EVENT
 function mousePressed() {
-    // --- Increment counter if orange square clicked ---
+    //  Increment counter if orange square clicked 
     if (checkCollisionWithSquare(orangeSquare)) {
         counter++;
         if (counter > 10) counter = 10; // max 10
     }
 
-    // --- BONUS II: decrement counter if red square clicked ---
+    //  Decrement counter if red square clicked 
     if (checkCollisionWithSquare(redSquare)) {
         counter--;
         if (counter < 0) counter = 0; // min 0

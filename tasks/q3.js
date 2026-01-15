@@ -47,34 +47,34 @@ function setup() {
 function draw() {
     background(0); // Clear canvas each frame
 
-    // ---- Draw Rectangle 1 ----
+    //  Draw Rectangle 1 
     fill(r1, g1, b1);
     rect(x1, y1, w1, h1);
 
-    // ---- Draw Rectangle 2 ----
+    //  Draw Rectangle 2 
     fill(r2, g2, b2);
     rect(x2, y2, w2, h2);
 
-    // ---- Draw Rectangle 3 ----
+    //  Draw Rectangle 3 
     fill(r3, g3, b3);
     rect(x3, y3, w3, h3);
 
-    // ---- Move rectangle 3 downward ----
+    //  Move rectangle 3 downward 
     y3 = y3 + 2; // move 2 pixels per frame downward
 
-    // ---- Check bottom bounds: if at bottom, reset to top ----
+    //  Check bottom bounds: if at bottom, reset to top 
     if (y3 > height) {
         y3 = 0; // reset to top
     }
 }
 
-// ---- Update rectangle 1 position on mouse click ----
+//  Update rectangle 1 position on mouse click 
 function mousePressed() {
     x1 = mouseX;
     y1 = mouseY;
 }
 
-// ---- Update rectangle 2 position on spacebar ----
+//  Update rectangle 2 position on spacebar 
 function keyPressed() {
     if (key === ' ') { // spacebar
         x2 = random(width - w2);  // new random x
@@ -82,7 +82,7 @@ function keyPressed() {
     }
 }
 
-// Colour change whenever mouse moves ----
+// Colour change whenever mouse moves 
 function mouseMoved() {
     r3 = random(255);
     g3 = random(255);

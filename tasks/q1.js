@@ -15,6 +15,7 @@ function setup() {
     r = 255;
     g = 192;
     b = 203;
+
     fill(r, g, b);
     ellipse(x, y, w, h);
 
@@ -26,6 +27,7 @@ function setup() {
     r = 255;
     g = 105;
     b = 180;
+
     fill(r, g, b);
     ellipse(x, y, w, h);
 
@@ -37,6 +39,7 @@ function setup() {
     r = 255;
     g = 0;
     b = 255;
+
     fill(r, g, b);
     ellipse(x, y, w, h);
 }
