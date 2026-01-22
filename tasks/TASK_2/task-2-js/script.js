@@ -93,73 +93,73 @@ console.log(parentElement);
 /*** END PART ONE ACCESS */ 
 
 
-// /*************************************** */
-// /*** START PART TWO MODIFY */ 
-// /*************************************** */
+/*************************************** */
+/*** START PART TWO MODIFY */ 
+/*************************************** */
 
-// /* 1: Select the first paragraph and replace the text within the paragraph... */
-// /***CODE  */
-// const p1 = document.querySelector("p")
-// p1.textContent =
-//     "New text in paragraph one: text changed by YOUR NAME on the following date: " +
-//     new Date().toDateString();
+/* 1: Select the first paragraph and replace the text within the paragraph... */
+/***CODE  */
+const p1 = document.querySelector("p")
+p1.textContent =
+    "New text in paragraph one: text changed by YEJIN on the following date: " +
+    new Date().toDateString();
 
-// /*************************************** */
-// /* 2: Select all elements in the HTML that have the class name content-container
-//  and change the background color ... of first and second ...*/
-// /***CODE */
-// const contentContainers = document.querySelectorAll(".content-container");
-// contentContainers[0].style.background = "orange";
-// contentContainers[1].style.background = "purple";
+/*************************************** */
+/* 2: Select all elements in the HTML that have the class name content-container
+ and change the background color ... of first and second ...*/
+/***CODE */
+const contentContainers = document.querySelectorAll(".content-container");
+contentContainers[0].style.background = "orange";
+contentContainers[1].style.background = "purple";
 
-// /*************************************** */
-// /* 3: Change the src element of the first image element on the page to be ...
-// /***CODE */
-// const firstImg = document.querySelector("img");
-// firstImg.src = "task-2-images/seven.png";
+/*************************************** */
+/* 3: Change the src element of the first image element on the page to be ...
+/***CODE */
+const firstImg = document.querySelector("img");
+firstImg.src = "task-2-images/seven.png";
 
-// /*************************************** */
-// /* 4: Select the third paragraph element on the page and 
-// replace the content (within the paragraph) to be an h2 element which contains the text `TEST 123`
-// /***CODE */
-// const thirdP = document.querySelectorAll("p")[2];
-// thirdP.innerHTML = "<h2>TEST 123</h2>";
+/*************************************** */
+/* 4: Select the third paragraph element on the page and 
+replace the content (within the paragraph) to be an h2 element which contains the text `TEST 123`
+/***CODE */
+const thirdP = document.querySelectorAll("p")[2];
+thirdP.innerHTML = "<h2>TEST 123</h2>";
 
-// /*************************************** */
-// /* 5: Select the fourth paragraph element on the page and 
-// add to the existing content an h2 element containing the text `TEST 123`
-// /***CODE */
-// const fourthP = document.querySelectorAll("p")[3];
-// const h2new = document.createElement("h2");  
-// h2new.textContent = "TEST 123";
-// fourthP.appendChild(h2new);
+/*************************************** */
+/* 5: Select the fourth paragraph element on the page and 
+add to the existing content an h2 element containing the text `TEST 123`
+/***CODE */
+const fourthP = document.querySelectorAll("p")[3];
+const h2new = document.createElement("h2");  
+h2new.textContent = "TEST 123";
+fourthP.appendChild(h2new);
 
-// /*************************************** */
-// /* 6: Select the fifth paragraph element on the page and add to the existing content 
-// an img element that holds `one.png`, and add the class newStyle to said paragraph element.
-// /***CODE */
-// const fifthP = document.querySelectorAll("p")[4];
-// const img = document.createElement("img");
-// img.src = "task-2-images/one.png";
-// fifthP.appendChild(img);
-// fifthP.classList.add("newStyle");
+/*************************************** */
+/* 6: Select the fifth paragraph element on the page and add to the existing content 
+an img element that holds `one.png`, and add the class newStyle to said paragraph element.
+/***CODE */
+const fifthP = document.querySelectorAll("p")[4];
+const img = document.createElement("img");
+img.src = "task-2-images/one.png";
+fifthP.appendChild(img);
+fifthP.classList.add("newStyle");
 
-// /*************************************** */
-// /* 7: Add the following array variable: let colors = ['red','blue','green','orange'];, 
-// then access all elements with class name inner-container and save to a variable called `innerContainers`. 
-// Next, iterate over the colors array, and for each color: 
-// assign the element from innerContainers variable with the same index 
-// (i.e. colors[0] should be allocated to the first innerContainers element, colors[1] to the second, etc ...) 
-// a background using that color.
-// /***CODE */
-// let colors = ['red','blue','green','orange'];
-// let innerContainers = document.querySelectorAll(".inner-container");
+/*************************************** */
+/* 7: Add the following array variable: let colors = ['red','blue','green','orange'];, 
+then access all elements with class name inner-container and save to a variable called `innerContainers`. 
+Next, iterate over the colors array, and for each color: 
+assign the element from innerContainers variable with the same index 
+(i.e. colors[0] should be allocated to the first innerContainers element, colors[1] to the second, etc ...) 
+a background using that color.
+/***CODE */
+let colors = ['red','blue','green','orange'];
+let innerContainers = document.querySelectorAll(".inner-container");
 
-// colors.forEach((color, index) => {
-//     if(innerContainers[index]){
-//       innerContainers[index].style.background = color;
-//     }
-//   });
+colors.forEach((color, index) => {
+    if(innerContainers[index]){
+      innerContainers[index].style.background = color;
+    }
+  });
 
 
 /*************************************** */
