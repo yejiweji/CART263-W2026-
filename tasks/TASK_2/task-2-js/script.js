@@ -11,7 +11,8 @@ console.log("we are a go!")
 const allParagraphs = document.querySelectorAll("p");
 console.log(allParagraphs);
 /***OUTPUT: 
- * NodeList of all <p> elements in the page
+ * NodeList(9)0: p#11: p#2.img-descript2: p#3.img-descript3: p#4.img-descript4: p#5.img-descript5: p#6.img-descript6: p#7.img-descript7: p#8.img-descript8: p#9.img-descriptlength: 9[[Prototype]]: NodeList
+
  */
 
 
@@ -21,7 +22,12 @@ console.log(allParagraphs);
 const firstParagraph = document.querySelector("p");
 console.log(firstParagraph);
 /***OUTPUT: 
- *  the first <p> element in the page
+ *  <p id="1"> 
+ * "Lorem ipsum dolor sit amet ..." 
+ * <pp style="background: green; color; white;">using create Element
+ *   </p>
+ * </p>
+
  */
 
 
@@ -31,8 +37,10 @@ console.log(firstParagraph);
 const innerContainersAccess = document.querySelectorAll(".inner-container");
 console.log(innerContainersAccess);
 /***OUTPUT: 
- * NodeList of all elements with class "inner-container"
- */
+NodeList(8) [div.inner-container, div.inner-container, 
+div.inner-container, div.inner-container, div.inner-container, div.inner-container, 
+div.inner-container, div.inner-container] 
+*/
 
 
 /*************************************** */
@@ -43,7 +51,7 @@ const lastImgInImgContainer =
 allImgInsideContainers[allImgInsideContainers.length - 1];
 console.log(lastImgInImgContainer);
 /*** OUTPUT:
-* The last <img> inside any .img-container
+ * <img class="img-image" src="task-2-images/seventeen.png">
 */
 
 
@@ -57,9 +65,9 @@ console.log(allH2s);
 console.log(allH2s.length);
 console.log(allH2s[0].textContent);
 /***OUTPUT: 
- * NodeList of all h2 elements
- * Number of h2 elements
- * Text content of first h2
+ * NodeList [h2]
+ * 0: h2length: 1
+ * [[Prototype]]: NodeList
  */
 
 
@@ -69,7 +77,16 @@ console.log(allH2s[0].textContent);
 const parentElement = document.getElementById("parent");
 console.log(parentElement);
 /***OUTPUT: 
- * The element with id="parent"
+ * <section id="parent">
+ *  <div class="inner-container">
+ *     <div class="content-container"> ... </div>
+ *   </div>
+ *  <div class="inner-container"> ... </div>
+ *  <div class="inner-container"> ... </div>
+ * .
+ * .
+ * .
+ * </section>
  */
 
 /*************************************** */
@@ -145,8 +162,8 @@ console.log(parentElement);
 //   });
 
 
-// /*************************************** */
-// /*** END PART TWO MODIFY */ 
+/*************************************** */
+/*** END PART TWO MODIFY */ 
 
 
 /*************************************** */
@@ -154,56 +171,85 @@ console.log(parentElement);
 /*************************************** */
 /* 1: NEW PARAGRAPHS */
 /* 1A: Access all paragraph elements, and store the result in a variable called: allPTagsThree */
+const allPTagsThree = document.querySelectorAll("p");
 
 /* 1B: Create a function:function customCreateElement(parent){ //body } */
-
+function customCreateElement(parent){
 /* 1C:  In the body of customCreateElement create a new parargraph element*/
-
+const newP = document.createElement("p");
 /* 1D:  Set the text of this element to be : `using create Element`*/
-
+newP.textContent = "using create Element";
 /* 1E:  Set the background of this paragraph element to be green */
-
+newP.style.background = "green";
 /* 1F:  Set the color of the text in this paragraph element to be white */
-
+newP.style.color = "white";
 /* 1G: Append this new element to the parent variable within the function. */
-
+parent.appendChild(newP);
+}
 /* 1H: Iterate through the allPTagsThree array and call customCreateElement(), 
 passing the current allPTagsThree element as the parent with each iteration.*/
 /***CODE */
-
+allPTagsThree.forEach(p => {
+    customCreateElement(p);
+});
 
 /***EXPLANATION::
- * 
- * 
+ * A new green paragraph is added inside every exisiting paragraph.
+ * each new paragraph contains the text "using create Element"
  */
 
 /*************************************** */
 /* 2: GRID OF BOXES */
 /* 2A: Create another new function: function customNewBoxCreate(parent){ //body }*/
-/* 2B: In the body of customNewBoxCreate create a new div element, that has the class testDiv. 
-/* 2C:Then append this new element to the parent variable within the function. 
+function customNewBoxCreate(parent){   
+//2B: In the body of customNewBoxCreate create a new div element, that has the class testDiv. 
+    const div = document.createElement("div");
+    div.classList.add("testDiv");
+//2C:Then append this new element to the parent variable within the function. 
+    parent.appendChild(div);
 /* 2D:Finally, return</code> this new element */
+    return div;
+ }
+const grid = document.getElementById("new-grid");
+
 /* 2E:Create a nested for loop (for rows and columns) to iterate through 10 columns and 10 rows (just like the JS Review :)). 
     Call the customNewBoxCreate function, in order to generate a new div -> representing each cell in the grid. 
     Ensure that the parent element for each of these new divs is the element whose id is named `new-grid`*/
-/* 2F: You will see at this point that the x,y position of the resulting divs makes no sense... 
+  for(let row = 0; row < 10; row++){
+    for(let col = 0; col < 10; col++){
+      // create a new div
+      const returnedDiv = customNewBoxCreate(grid);
+
+/*2F: You will see at this point that the x,y position of the resulting divs makes no sense... 
     Fix this by doing the following: every time you call customNewBoxCreate() - save the current returned element 
     in a variable i.e. returnedDiv. 
     Set the style (left and top) to the of this element to 
     the necessary x and y position (use the counter variables in the for nested for loop to 
-    calculate the new positions.
+    calculate the new positions. */
+returnedDiv.style.left = col * 40 + "px";
+returnedDiv.style.top = row * 40 + "px";
+
 /* 2G: BONUS I: Make every div in the resulting grid in an even numbered row have white background 
     and otherwise let it have a background of purple.</li>
 /* 2H: BONUS II: For every div in an even numbered row make it contain the text `EVEN`, 
     otherwise lat it have the content `ODD`.*/
-
 /***CODE */
-
+if(row % 2 === 0){
+        returnedDiv.style.background = "white";
+        returnedDiv.textContent = "EVEN";
+      } else {
+        returnedDiv.style.background = "purple";
+        returnedDiv.textContent = "ODD";
+      }
+    }
+  }
 
 /***EXPLANATION::
- * 
- * 
- */
+ * This creates a 10x10 grid (100 divs).   
+ * each div is positioned using left and top.
+ * even rows are white and labelled EVEN.
+ * odd rows are purple and labelled ODD.
+*/
 
 /*************************************** */
 /* 3: GRID OF BOXES II */
@@ -220,11 +266,33 @@ passing the current allPTagsThree element as the parent with each iteration.*/
     when dividing by three. */
 
 /***CODE */
+const gridThree = document.getElementById("new-grid-three");
 
+  for(let row = 0; row < 10; row++){
+    for(let col = 0; col < 10; col++){
+      const returnedDiv = customNewBoxCreate(gridThree);
+
+      returnedDiv.style.left = col * 40 + "px";
+      returnedDiv.style.top = row * 40 + "px";
+
+      const remainder = col % 3;
+      returnedDiv.textContent = remainder;
+
+      if(remainder === 0){
+        returnedDiv.style.background = "red";
+      } else if(remainder === 1){
+        returnedDiv.style.background = "orange";
+      } else {
+        returnedDiv.style.background = "yellow";
+      }
+    }
+  }
 
 /***EXPLANATION::
- * 
- * 
+ * This creates another 10x10 grid.
+ * each column is coloured based on col % 3:
+ * 0 → red, 1 → orange, 2 → yellow.
+ * each cell shows the remainder number.
  */
 
 /*************************************** */
