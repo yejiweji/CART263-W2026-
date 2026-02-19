@@ -28,6 +28,7 @@ let garden = {
       //the sky element
       skyDiv: document.createElement("div"),
     },
+    beeHives: [],
   };
   // new  sun instancce
   let sun =  new Sun(10,10,{r: 240, g: 206,b: 83})
@@ -46,6 +47,18 @@ let garden = {
     garden.grass.grassDiv.style.background = `rgb(${garden.grass.grassColor.r},${garden.grass.grassColor.g},${garden.grass.grassColor.b})`;
     document.getElementsByTagName("main")[0].appendChild(garden.grass.grassDiv);
 
+   // Create beehives
+
+  let hive1 = new BeeHive(200, 350, 1, { r: 230, g: 180, b: 60 });
+  let hive2 = new BeeHive(600, 360, 1, { r: 240, g: 190, b: 70 });
+
+  garden.beeHives.push(hive1);
+  garden.beeHives.push(hive2);
+
+  hive1.renderBeeHive();
+  hive2.renderBeeHive();
+
+    
     //create some flowers
     for (let i = 0; i < garden.numFlowers; i++) {
         // Create variables for our arguments for clarity
