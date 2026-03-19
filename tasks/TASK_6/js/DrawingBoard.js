@@ -27,7 +27,7 @@ class DrawingBoard {
     this.mouseOffsetX = parseInt(e.clientX - this.canvasBoundingRegion.x);
     this.mouseOffsetY = parseInt(e.clientY - this.canvasBoundingRegion.y);
 
-    // ✅ TASK 1 LOGIC FOR PART A
+////// TASK 1 LOGIC FOR PART A
     if (this.drawingBoardId === "partA") {
 
       // SHIFT + CLICK = REMOVE nearest circle
@@ -69,7 +69,7 @@ class DrawingBoard {
       }
     }
   }
-
+////////
   addObj(objToAdd) {
     this.objectsOnCanvas.push(objToAdd);
   }
@@ -81,7 +81,7 @@ class DrawingBoard {
   }
 
   animate() {
-    // ✅ clear ONCE per frame (fix)
+    // clear ONCE per frame
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     for (let i = 0; i < this.objectsOnCanvas.length; i++) {
