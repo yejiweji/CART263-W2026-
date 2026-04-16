@@ -1,11 +1,13 @@
 CART 263 Project 2 Response
 
-Diana Edvi – Procedural Terrain
-https://dianaedvi.github.io/CART-263/projects/project_2/
+Diana Edvi – Procedural Terrain </br>
+https://dianaedvi.github.io/CART-263/projects/project_2/ 
+</br>
 This project looks visually interesting, especially in how it generates terrain that resembles Minecraft-style procedural landscapes. The main interaction is limited to pressing space to regenerate the terrain or using zoom controls, which feels a bit restrictive. If there are other controls, they are not immediately intuitive or well communicated in the interface. From a technical standpoint, the terrain is likely generated using noise functions such as Perlin or Simplex noise, where height values are computed from coordinate inputs. This is what allows the landscape to look natural instead of random block placement. The result is a continuous heightmap that produces smooth hills and valleys. The atmosphere is one of the strongest parts of the project. The moving clouds and fog suggest the use of volumetric fog techniques, likely combined with depth-based blending to create distance and scale. This gives the environment more depth and makes the terrain feel larger than it actually is. The water reflections also stand out. They likely rely on lighting calculations such as specular reflection based on camera position and light direction, which helps simulate realistic surface reflection. Overall, I liked the concept and presentation, but it feels more like a technical environment demo than an interactive experience.
 
-Emile Bedard – Interactive Bike Garage II
+Emile Bedard – Interactive Bike Garage II </br>
 https://emilebedard.github.io/cart263/Projects/project2/interactive_bike_garage_ii/parts_registry.html
+</br>
 First impression is that the visuals are very clean and well-produced. It is not immediately clear whether the assets were created in Blender or built directly in Three.js, but the integration between UI and 3D space is strong. A key feature is how the Register Parts and Maintenance buttons are linked to objects in the 3D scene. When hovering over these buttons, the cabinet and toolbox animate. This is likely done through event listeners in JavaScript that trigger state changes in a Three.js animation system, where UI hover events update object transforms or animation clips. The state driven structure is one of the strongest technical parts of the project because it connects DOM interaction with 3D behaviour in a consistent way. The Add Bike button does not seem to function, which makes me unsure if it is incomplete or intentionally disabled. Most of the interaction is centered around the Maintenance section, as it feels complete. It feels similar to a lightweight database lookup system implemented on the frontend. Overall, the project feels more like a functional interface than a purely visual scene.
 
 Sean Gregory – Project 2
