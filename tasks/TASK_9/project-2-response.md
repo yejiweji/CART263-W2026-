@@ -1,6 +1,6 @@
 CART 263 Project 2 Response
 <br> </br>
-Artemis II by Chloe Guerin </br>
+Artemis II by Chloe Guerin: </br>
 https://chloe-jpeg.github.io/CART263/project2/
 </br></br>
 This project recreates NASA’s Artemis II mission using a 3D scene rendered in the browser. The strongest part of the experience is the visual quality. The Earth, Moon, lighting, and star background feel polished and convincing. The colour palette works well, and the overall aesthetic feels cohesive. The scene loads clearly, and the animation runs smoothly, which makes the project feel technically solid right away. 
