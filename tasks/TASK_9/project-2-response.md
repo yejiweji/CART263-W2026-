@@ -1,12 +1,12 @@
 CART 263 Project 2 Response
-<br>
+<br> </br>
 Artemis II by Chloe Guerin </br>
 https://chloe-jpeg.github.io/CART263/project2/
 </br></br>
 This project recreates NASA’s Artemis II mission using a 3D scene rendered in the browser. The strongest part of the experience is the visual quality. The Earth, Moon, lighting, and star background feel polished and convincing. The colour palette works well, and the overall aesthetic feels cohesive. The scene loads clearly, and the animation runs smoothly, which makes the project feel technically solid right away. 
-</br>
+</br></br>
 From an interaction standpoint, the project is simple. The user presses a button to start and reset the animation. The spacecraft then travels from Earth toward the Moon along a curved trajectory. While the animation is clean and readable, the limited interaction stood out. I wanted to orbit the camera, zoom, or view the trip from different angles. Because the camera is fixed, the experience feels more like watching a short animation than exploring a 3D simulation. Adding camera controls would significantly improve the sense of scale and engagement. Additionally, the scale of the spacecraft compared to the distance and scale between Earth and the Moon was a bit distracting. The ship appears quite large relative to the journey, which makes the distance feel shorter than expected. If the spacecraft were smaller, the trip would communicate the massive scale of space more effectively. The starting position also felt slightly off because the spacecraft appears to spawn from the centre of the Earth. Launching from the surface would make the animation feel more believable and impactful.
-</br>
+</br></br>
 Looking at the code helped explain how the project works technically. The scene is built using Three.js, with the usual setup of a scene, camera, and WebGL renderer. The Earth and Moon are created as sphere geometries with texture maps applied, which explains the realistic appearance. The lighting setup uses a light source to simulate the Sun, giving the planets shading and depth. This lighting contributes heavily to the convincing look of the project. The animation logic is handled in the render loop. The spacecraft position is updated over time using a curve path, which creates the smooth arc between Earth and Moon. This approach is effective because it keeps the motion predictable and easy to control. The reset button works by restarting the animation variables, which keeps the interaction simple and clear. The code structure is easy to follow and shows a solid understanding of how Three.js scenes are typically organized.
-</br>
+</br></br>
 The most compelling part of the project is how strong the visual design is compared to the minimal interaction. The textures, lighting, and composition show careful attention to detail. At the same time, the project feels like it stops just before becoming an interactive simulation. More user control, more realistic scaling, and a more believable launch starting point would push the project further. Overall, the project demonstrates strong technical execution and visual design using Three.js. The main opportunity for growth is expanding interaction and improving realism in scale and movement, so the experience feels less like a short animation and more like a space exploration tool.
