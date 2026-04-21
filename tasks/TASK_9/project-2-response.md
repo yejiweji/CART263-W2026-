@@ -2,7 +2,7 @@ CART 263 Project 2 Response
 <br>
 Artemis II by Chloe Guerin </br>
 https://chloe-jpeg.github.io/CART263/project2/
-</br>
+</br></br>
 This project recreates NASA’s Artemis II mission using a 3D scene rendered in the browser. The strongest part of the experience is the visual quality. The Earth, Moon, lighting, and star background feel polished and convincing. The colour palette works well, and the overall aesthetic feels cohesive. The scene loads clearly, and the animation runs smoothly, which makes the project feel technically solid right away. 
 </br>
 From an interaction standpoint, the project is simple. The user presses a button to start and reset the animation. The spacecraft then travels from Earth toward the Moon along a curved trajectory. While the animation is clean and readable, the limited interaction stood out. I wanted to orbit the camera, zoom, or view the trip from different angles. Because the camera is fixed, the experience feels more like watching a short animation than exploring a 3D simulation. Adding camera controls would significantly improve the sense of scale and engagement. Additionally, the scale of the spacecraft compared to the distance and scale between Earth and the Moon was a bit distracting. The ship appears quite large relative to the journey, which makes the distance feel shorter than expected. If the spacecraft were smaller, the trip would communicate the massive scale of space more effectively. The starting position also felt slightly off because the spacecraft appears to spawn from the centre of the Earth. Launching from the surface would make the animation feel more believable and impactful.
